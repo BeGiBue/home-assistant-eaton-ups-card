@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/BeGiBue/eaton-ups-card/main/images/eaton-ups-card-logo.svg" alt="Eaton UPS Card" width="420">
+  <img src="https://raw.githubusercontent.com/BeGiBue/home-assistant-eaton-ups-card/main/images/eaton-ups-card-logo.svg" alt="Eaton UPS Card" width="420">
 </p>
 
 <h1 align="center">Eaton UPS Card</h1>
@@ -10,12 +10,12 @@
 
 <p align="center">
   <strong>Version 1.2.2</strong><br>
-  <a href="https://github.com/BeGiBue/eaton-ups-card/actions/workflows/validate.yml"><img src="https://github.com/BeGiBue/eaton-ups-card/actions/workflows/validate.yml/badge.svg" alt="HACS validation"></a>
+  <a href="https://github.com/BeGiBue/home-assistant-eaton-ups-card/actions/workflows/validate.yml"><img src="https://github.com/BeGiBue/home-assistant-eaton-ups-card/actions/workflows/validate.yml/badge.svg" alt="HACS validation"></a>
 </p>
 
 ## Vorschau
 
-![Eaton UPS Card in Home Assistant](https://raw.githubusercontent.com/BeGiBue/eaton-ups-card/main/screenshots/eaton-ups-card.jpg)
+![Eaton UPS Card in Home Assistant](https://raw.githubusercontent.com/BeGiBue/home-assistant-eaton-ups-card/main/screenshots/eaton-ups-card.jpg)
 
 ## Funktionen
 
@@ -45,12 +45,12 @@ Alle Entitäten können im grafischen Karteneditor über die normalen Home-Assis
 
 ### Automatisch
 
-[![Open your Home Assistant instance and open this repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=BeGiBue&repository=eaton-ups-card&category=plugin)
+[![Open your Home Assistant instance and open this repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=BeGiBue&repository=home-assistant-eaton-ups-card&category=plugin)
 
 ### Manuell
 
 1. In HACS **Benutzerdefinierte Repositories** öffnen.
-2. `https://github.com/BeGiBue/eaton-ups-card` hinzufügen.
+2. `https://github.com/BeGiBue/home-assistant-eaton-ups-card` hinzufügen.
 3. Als Typ **Dashboard** auswählen.
 4. **Eaton UPS Card** installieren.
 5. Home Assistant bzw. den Browser vollständig neu laden.
@@ -142,7 +142,7 @@ Für die Statusauswertung werden `status_entity` und `status_data_entity` gemein
 
 ## Release
 
-Alle Versionen stehen unter [GitHub Releases](https://github.com/BeGiBue/eaton-ups-card/releases), die Änderungen im Detail in [`CHANGELOG.md`](CHANGELOG.md). Zu jeder Version gibt es eine Datei `RELEASE_NOTES_<Version>.md`.
+Alle Versionen stehen unter [GitHub Releases](https://github.com/BeGiBue/home-assistant-eaton-ups-card/releases), die Änderungen im Detail in [`CHANGELOG.md`](CHANGELOG.md). Zu jeder Version gibt es eine Datei `RELEASE_NOTES_<Version>.md`.
 
 ## Hinweise zu Marken
 

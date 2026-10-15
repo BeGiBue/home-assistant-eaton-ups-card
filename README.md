@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/BeGiBue/home-assistant-eaton-ups-card/main/images/eaton-ups-card-logo.svg" alt="Eaton UPS Card" width="420">
+  <img src="https://raw.githubusercontent.com/BeGiBue/home-assistant-eaton-ups-card/main/images/eaton-ups-card-icon-160.png" alt="Eaton UPS Card" width="160">
 </p>
 
 <h1 align="center">Eaton UPS Card</h1>

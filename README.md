@@ -17,6 +17,23 @@
 
 ![Eaton UPS Card in Home Assistant](https://raw.githubusercontent.com/BeGiBue/home-assistant-eaton-ups-card/main/screenshots/eaton-ups-card.jpg)
 
+
+### Aktuelle Ansichten – schmal (350 px), helles Theme
+
+Echte Browseraufnahmen des unveränderten Kartencodes mit simulierten Entitätswerten in einer Testumgebung mit Home-Assistant-Komponenten. Die Bilder wurden mit 350 px Kartenbreite und zweifacher Pixeldichte aufgenommen.
+
+**Normalbetrieb**
+
+<img src="screenshots/eaton-ups-normal-350-light.png" width="350" alt="Eaton UPS Card im Normalbetrieb: Online, 230 V, 21 Prozent Last">
+
+**Batteriebetrieb**
+
+<img src="screenshots/eaton-ups-battery-350-light.png" width="350" alt="Eaton UPS Card im Batteriebetrieb: Versorgung über Akku">
+
+**Alarm: Überlast**
+
+<img src="screenshots/eaton-ups-alarm-350-light.png" width="350" alt="Eaton UPS Card mit Überlastalarm: 95 Prozent Last">
+
 ## Funktionen
 
 - Theme-sensitive Darstellung für Light Mode, Dark Mode und benutzerdefinierte Themes

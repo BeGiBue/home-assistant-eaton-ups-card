@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 1.2.2</strong><br>
+  <strong>Version 1.2.3</strong><br>
   <a href="https://github.com/BeGiBue/home-assistant-eaton-ups-card/actions/workflows/validate.yml"><img src="https://github.com/BeGiBue/home-assistant-eaton-ups-card/actions/workflows/validate.yml/badge.svg" alt="HACS validation"></a>
 </p>
 
@@ -17,15 +17,15 @@
 
 **Normalbetrieb**
 
-<img src="screenshots/eaton-ups-normal-350-light.png" width="350" alt="Eaton UPS Card im Normalbetrieb: Online, 230 V, 21 Prozent Last">
+<img src="https://raw.githubusercontent.com/BeGiBue/home-assistant-eaton-ups-card/main/screenshots/eaton-ups-normal-350-light.png" width="350" alt="Eaton UPS Card im Normalbetrieb: Online, 230 V, 21 Prozent Last">
 
 **Batteriebetrieb**
 
-<img src="screenshots/eaton-ups-battery-350-light.png" width="350" alt="Eaton UPS Card im Batteriebetrieb: Versorgung über Akku">
+<img src="https://raw.githubusercontent.com/BeGiBue/home-assistant-eaton-ups-card/main/screenshots/eaton-ups-battery-350-light.png" width="350" alt="Eaton UPS Card im Batteriebetrieb: Versorgung über Akku">
 
 **Alarm: Überlast**
 
-<img src="screenshots/eaton-ups-alarm-350-light.png" width="350" alt="Eaton UPS Card mit Überlastalarm: 95 Prozent Last">
+<img src="https://raw.githubusercontent.com/BeGiBue/home-assistant-eaton-ups-card/main/screenshots/eaton-ups-alarm-350-light.png" width="350" alt="Eaton UPS Card mit Überlastalarm: 95 Prozent Last">
 
 ## Funktionen
 

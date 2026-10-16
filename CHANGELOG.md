@@ -2,6 +2,14 @@
 
 Alle relevanten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.
 
+## 1.2.3
+
+- Neue, im Browser erstellte Vorschauen aus dem unveränderten Original-Code in der README.
+- Vorschau-Bilder über absolute Raw-URLs für die Anzeige in GitHub und HACS eingebunden.
+- Versionsangaben für das Patch-Release aktualisiert.
+
+Keine Änderungen an der Funktionsweise der Karte oder Integration.
+
 ## 1.2.2 - 2026-10-08
 
 ### Dokumentation

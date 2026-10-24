@@ -202,5 +202,5 @@ class EatonUpsCard extends HTMLElement{
 }
 if(!customElements.get("eaton-ups-card"))customElements.define("eaton-ups-card",EatonUpsCard);
 window.customCards=window.customCards||[];
-if(!window.customCards.some(c=>c.type==="eaton-ups-card"))window.customCards.push({type:"eaton-ups-card",name:"Eaton UPS Card",description:"Eaton-USV-Card im Glas-Look, optimiert für iPhone, iPad und Hochformat-Kiosk.",preview:true,documentationURL:"https://github.com/BeGiBue/eaton-ups-card"});
+if(!window.customCards.some(c=>c.type==="eaton-ups-card"))window.customCards.push({type:"eaton-ups-card",name:"Eaton UPS Card",description:"Eaton-USV-Card im Glas-Look, optimiert für iPhone, iPad und Hochformat-Kiosk.",preview:true,documentationURL:"https://github.com/BeGiBue/home-assistant-eaton-ups-card"});
 console.info(`Eaton UPS Card v${VERSION}`);

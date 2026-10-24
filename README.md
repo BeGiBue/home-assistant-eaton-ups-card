@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 1.2.3</strong><br>
+  <strong>Version 2.0.0</strong><br>
   <a href="https://github.com/BeGiBue/home-assistant-eaton-ups-card/actions/workflows/validate.yml"><img src="https://github.com/BeGiBue/home-assistant-eaton-ups-card/actions/workflows/validate.yml/badge.svg" alt="HACS validation"></a>
 </p>
 
@@ -35,8 +35,13 @@
 - Automatische Auswertung typischer NUT-Statuswerte
 - Klick auf Messwerte öffnet den Home-Assistant-Mehr-Informationen-Dialog
 - Optimiert für Hochformat und Touch – iPhone, iPad und Raspberry-Pi-Kiosk: Schrift wächst mit der Kartenbreite, große Tippflächen, kein Hover-Zwang
-- Glas-Look: Hintergrund, Rand und Blur kommen vom Theme (z. B. Frosted Glass), Status als Pill
 - Last mit Fortschrittsbalken (orange ab 70 %, rot ab 90 %)
+
+## Voraussetzungen und Grenzen
+
+- Eine Home-Assistant-Integration wie NUT muss die benötigten USV-Entitäten bereits bereitstellen; die Karte verbindet sich nicht selbst mit der USV.
+- Die Standard-Entity-IDs sind Beispiele und müssen zur eigenen Installation passen.
+- Nicht verfügbare Werte werden als „—“ angezeigt. Die Karte überwacht und schaltet die USV nicht selbst.
 
 ## Standard-Entitäten
 
@@ -53,19 +58,24 @@ Alle Entitäten können im grafischen Karteneditor über die normalen Home-Assis
 
 ## Installation über HACS
 
-### Automatisch
+Das Projekt ist im offiziellen HACS-Katalog enthalten. Ein benutzerdefiniertes Repository ist für die reguläre Installation nicht erforderlich.
 
-[![Open your Home Assistant instance and open this repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=BeGiBue&repository=home-assistant-eaton-ups-card&category=plugin)
+1. HACS öffnen und nach **Eaton UPS Card** suchen.
+2. **Eaton UPS Card** auswählen und installieren.
+3. Browser bzw. Home-Assistant-App vollständig neu laden.
+4. Die Karte im Dashboard hinzufügen und die Entitäten auswählen.
 
-### Manuell
+[![In HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=BeGiBue&repository=home-assistant-eaton-ups-card&category=plugin)
 
-1. In HACS **Benutzerdefinierte Repositories** öffnen.
-2. `https://github.com/BeGiBue/home-assistant-eaton-ups-card` hinzufügen.
-3. Als Typ **Dashboard** auswählen.
-4. **Eaton UPS Card** installieren.
-5. Home Assistant bzw. den Browser vollständig neu laden.
+### Bestehende Installation aus einem Custom Repository übernehmen
 
-Das Repository enthält eine HACS-Validierung unter `.github/workflows/validate.yml`. In `hacs.json` ist `eaton-ups-card.js` explizit als Plugin-Datei angegeben.
+1. Prüfen, ob **Eaton UPS Card** in der HACS-Suche im offiziellen Katalog verfügbar ist. Falls noch nicht, HACS aktualisieren und den bisherigen Eintrag vorerst behalten.
+2. Sobald der Katalogeintrag verfügbar ist, unter **HACS → Benutzerdefinierte Repositories** nur den Eintrag für `BeGiBue/home-assistant-eaton-ups-card` entfernen.
+3. Die bestehende Installation **nicht deinstallieren**. Dashboard-Karten, YAML-Konfiguration und vorhandene Ressourcen beibehalten.
+4. HACS aktualisieren bzw. die Repository-Informationen neu laden und prüfen, dass die installierte Karte weiterhin erkannt wird und Updates angeboten werden.
+5. Nach einem Update das Frontend neu laden und die bestehenden Karten prüfen. Der Kartentyp `custom:eaton-ups-card` und die Konfigurationsschlüssel bleiben erhalten.
+
+Die Major-Version 2.0.0 kennzeichnet die Aufnahme in den offiziellen HACS-Katalog und bedeutet nicht automatisch Breaking Changes. Diese Version verlangt keine Änderung vorhandener Kartenkonfigurationen.
 
 ## Card hinzufügen
 
@@ -116,6 +126,8 @@ image: /local/images/meine_usv.png
 ```
 
 Kann die eigene Bild-URL nicht geladen werden, fällt die Card auf das eingebettete Standardbild zurück.
+
+Eigene Bild-URLs lädt der Browser direkt. Externe Anbieter sehen dabei die IP-Adresse des Browsers; HTTP-Bilder bieten keine Transportverschlüsselung und können unter HTTPS blockiert werden. Bevorzugt lokale `/local/`-Bilder oder vertrauenswürdige HTTPS-Quellen verwenden und keine Zugangsdaten in Bild-URLs hinterlegen.
 
 ## Layout
 

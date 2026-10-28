@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 2.0.0</strong><br>
+  <strong>Version 2.0.1</strong><br>
   <a href="https://github.com/BeGiBue/home-assistant-eaton-ups-card/actions/workflows/validate.yml"><img src="https://github.com/BeGiBue/home-assistant-eaton-ups-card/actions/workflows/validate.yml/badge.svg" alt="HACS validation"></a>
 </p>
 
@@ -40,21 +40,8 @@
 ## Voraussetzungen und Grenzen
 
 - Eine Home-Assistant-Integration wie NUT muss die benötigten USV-Entitäten bereits bereitstellen; die Karte verbindet sich nicht selbst mit der USV.
-- Die Standard-Entity-IDs sind Beispiele und müssen zur eigenen Installation passen.
+- Die Standard-Entity-IDs (siehe vollständiges Beispiel unten) sind Beispiele und müssen zur eigenen Installation passen.
 - Nicht verfügbare Werte werden als „—“ angezeigt. Die Karte überwacht und schaltet die USV nicht selbst.
-
-## Standard-Entitäten
-
-```text
-sensor.ups_ausgangsspannung
-sensor.ups_last
-sensor.ups_status
-sensor.ups_statusdaten
-sensor.ups_akkulaufzeit
-sensor.waschkeller_ups_wirkleistung
-```
-
-Alle Entitäten können im grafischen Karteneditor über die normalen Home-Assistant-Entity-Picker oder per YAML geändert werden.
 
 ## Installation über HACS
 
@@ -69,13 +56,13 @@ Das Projekt ist im offiziellen HACS-Katalog enthalten. Ein benutzerdefiniertes R
 
 ### Bestehende Installation aus einem Custom Repository übernehmen
 
-1. Prüfen, ob **Eaton UPS Card** in der HACS-Suche im offiziellen Katalog verfügbar ist. Falls noch nicht, HACS aktualisieren und den bisherigen Eintrag vorerst behalten.
-2. Sobald der Katalogeintrag verfügbar ist, unter **HACS → Benutzerdefinierte Repositories** nur den Eintrag für `BeGiBue/home-assistant-eaton-ups-card` entfernen.
+1. Prüfen, dass **Eaton UPS Card** in der HACS-Suche im offiziellen Katalog verfügbar ist.
+2. Danach unter **HACS → Benutzerdefinierte Repositories** nur den Eintrag für `BeGiBue/home-assistant-eaton-ups-card` entfernen.
 3. Die bestehende Installation **nicht deinstallieren**. Dashboard-Karten, YAML-Konfiguration und vorhandene Ressourcen beibehalten.
 4. HACS aktualisieren bzw. die Repository-Informationen neu laden und prüfen, dass die installierte Karte weiterhin erkannt wird und Updates angeboten werden.
-5. Nach einem Update das Frontend neu laden und die bestehenden Karten prüfen. Der Kartentyp `custom:eaton-ups-card` und die Konfigurationsschlüssel bleiben erhalten.
+5. Nach einem Update das Frontend neu laden und die bestehenden Karten prüfen.
 
-Die Major-Version 2.0.0 kennzeichnet die Aufnahme in den offiziellen HACS-Katalog und bedeutet nicht automatisch Breaking Changes. Diese Version verlangt keine Änderung vorhandener Kartenkonfigurationen.
+Die Major-Version 2.0.0 kennzeichnet die Aufnahme in den offiziellen HACS-Katalog und bedeutet nicht automatisch Breaking Changes. Der Kartentyp `custom:eaton-ups-card` und die Konfigurationsschlüssel bleiben erhalten; vorhandene Kartenkonfigurationen müssen nicht geändert werden.
 
 ## Card hinzufügen
 
@@ -99,6 +86,8 @@ power_entity: sensor.waschkeller_ups_wirkleistung
 show_status_data: true
 ```
 
+Alle Entitäten können auch im grafischen Karteneditor über die Home-Assistant-Entity-Picker geändert werden.
+
 ## Optionen
 
 | Option | Werte | Standard | Beschreibung |
@@ -117,7 +106,7 @@ image_mode: background
 
 ## Bild
 
-Das Standardbild der Eaton 3S 850 ist direkt in `eaton-ups-card.js` eingebettet. HACS muss deshalb keine zusätzliche Bilddatei installieren.
+Das Standardbild der Eaton 3S 850 ist direkt in `eaton-ups-card.js` eingebettet.
 
 Optional kann eine eigene Bild-URL gesetzt werden:
 
@@ -145,7 +134,7 @@ Bei schmaler Card stehen die vier Messwerte in einem 2×2-Raster, ab ca. 700 px 
 └──────────────────┴───────────────────┘
 ```
 
-Die Breite wird über Home Assistants **Layout**-Einstellungen festgelegt; die Card implementiert `getGridOptions()`. Eine feste Höhe gibt es nicht – die Höhe ergibt sich aus dem Inhalt. Die Card meldet Home Assistant ihre Mindesthöhe (`min_rows`); im Layout-Editor lässt sich die Höhe daher nicht kleiner einstellen, als der Inhalt braucht. Alle Größen sind in `em` angegeben, die Schrift wächst mit der Kartenbreite (und mit `scale`).
+Die Breite wird über Home Assistants **Layout**-Einstellungen festgelegt; die Card implementiert `getGridOptions()`. Eine feste Höhe gibt es nicht – die Höhe ergibt sich aus dem Inhalt. Die Card meldet Home Assistant ihre Mindesthöhe (`min_rows`); im Layout-Editor lässt sich die Höhe daher nicht kleiner einstellen, als der Inhalt braucht.
 
 ## Statusauswertung
 
@@ -161,10 +150,6 @@ Typische NUT-Statuswerte werden automatisch interpretiert:
 - `OFF` → Ausgeschaltet
 
 Für die Statusauswertung werden `status_entity` und `status_data_entity` gemeinsam berücksichtigt.
-
-## Release
-
-Alle Versionen stehen unter [GitHub Releases](https://github.com/BeGiBue/home-assistant-eaton-ups-card/releases), die Änderungen im Detail in [`CHANGELOG.md`](CHANGELOG.md). Zu jeder Version gibt es eine Datei `RELEASE_NOTES_<Version>.md`.
 
 ## Hinweise zu Marken
 

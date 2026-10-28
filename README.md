@@ -62,8 +62,6 @@ Das Projekt ist im offiziellen HACS-Katalog enthalten. Ein benutzerdefiniertes R
 4. HACS aktualisieren bzw. die Repository-Informationen neu laden und prüfen, dass die installierte Karte weiterhin erkannt wird und Updates angeboten werden.
 5. Nach einem Update das Frontend neu laden und die bestehenden Karten prüfen.
 
-Die Major-Version 2.0.0 kennzeichnet die Aufnahme in den offiziellen HACS-Katalog und bedeutet nicht automatisch Breaking Changes. Der Kartentyp `custom:eaton-ups-card` und die Konfigurationsschlüssel bleiben erhalten; vorhandene Kartenkonfigurationen müssen nicht geändert werden.
-
 ## Card hinzufügen
 
 Minimal:

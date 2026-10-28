@@ -151,10 +151,6 @@ Typische NUT-Statuswerte werden automatisch interpretiert:
 
 Für die Statusauswertung werden `status_entity` und `status_data_entity` gemeinsam berücksichtigt.
 
-## Änderungen
-
-Alle Versionen stehen unter [GitHub Releases](https://github.com/BeGiBue/home-assistant-eaton-ups-card/releases), die Änderungen im Detail in [`CHANGELOG.md`](CHANGELOG.md).
-
 ## Hinweise zu Marken
 
 Dieses Projekt ist ein unabhängiges Community-Projekt und steht in keiner Verbindung zu Eaton oder Home Assistant. Es wird weder von Eaton noch von Home Assistant unterstützt oder herausgegeben.

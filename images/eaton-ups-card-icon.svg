@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t">
-  <title id="t">Eaton UPS Card</title>
-  <circle cx="256" cy="256" r="232" fill="#0a6070"/>
-  <rect x="206" y="104" width="100" height="30" rx="10" fill="#ffffff"/>
-  <rect x="166" y="124" width="180" height="284" rx="28" fill="#ffffff"/>
-  <path d="M276 160 L210 272 H252 L236 366 L304 248 H262 Z" fill="#f59e0b"/>
-</svg>

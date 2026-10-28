@@ -2,12 +2,17 @@
 
 Alle relevanten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.
 
+## 2.0.1 - 2026-10-28
+
+- Aufräumarbeiten ohne Funktionsänderung: Begrenzung der Kartengröße an einer Stelle zusammengeführt, einen überflüssigen Merker, eine nie zutreffende Prüfung und wirkungslose Gestaltungsregeln entfernt. Aussehen, Konfiguration und Verhalten bleiben unverändert.
+- Repository verschlankt: nicht benötigte Logo-Dateien und Bildquelle, interne Release-Checkliste und die Pflicht-Dateien `RELEASE_NOTES_<Version>.md` entfernt (der Release-Text kommt jetzt aus diesem Changelog), doppelte Aussagen in der README gestrichen, Security-Review gekürzt.
+
 ## 2.0.0 - 2026-10-24
 
 - Aufnahme in den offiziellen HACS-Katalog; Installation über die HACS-Suche als Standardweg dokumentiert.
-- Migration bestehender Custom-Repositories beschrieben: nur den benutzerdefinierten Eintrag entfernen, die Installation und vorhandene Dashboard-Konfigurationen erhalten.
+- Migration bestehender Custom-Repositories beschrieben: nur den benutzerdefinierten Eintrag entfernen, die Installation und vorhandene Dashboard-Konfigurationen erhalten; danach HACS aktualisieren und prüfen, dass die Installation weiterhin erkannt wird.
 - README auf Funktionen, Voraussetzungen, Konfiguration und Bedienung ausgerichtet.
-- Security-Review der DOM-Ausgaben, Entity-Werte, Attribute, Bild-URLs und Home-Assistant-Schnittstellen dokumentiert; adversariale Rendering-Tests ergänzt. Keine bestätigte XSS-Lücke im geprüften Stand gefunden.
+- Security-Review der DOM-Ausgaben, Entity-Werte, Attribute, Bild-URLs und Home-Assistant-Schnittstellen dokumentiert; adversariale Rendering-Tests ergänzt. Keine bestätigte XSS-Lücke im geprüften Stand gefunden. Details und Grenzen stehen in `SECURITY_REVIEW.md`.
 - Major-Version als Kennzeichnung des HACS-Katalogeintrags: kein automatischer Hinweis auf Breaking Changes; vorhandene Kartentypen und Konfigurationen bleiben kompatibel.
 
 ## 1.2.3
@@ -31,7 +36,7 @@ Keine Änderungen an der Funktionsweise der Karte oder Integration.
 
 ### Behoben
 
-- Die Card ragte über ihren Bereich hinaus, wenn im Layout-Editor zu wenige Zeilen eingestellt waren; nachfolgende Karten rutschten hinein. Die Card meldet jetzt ihre benötigte Mindesthöhe (`min_rows`), kleinere Werte lässt der Editor nicht mehr zu.
+- Die Card ragte über ihren Bereich hinaus, wenn im Layout-Editor zu wenige Zeilen eingestellt waren; nachfolgende Karten rutschten hinein. Die Card meldet jetzt ihre benötigte Mindesthöhe (`min_rows`), kleinere Werte lässt der Editor nicht mehr zu. Eine zuvor zu klein eingestellte Höhe wird automatisch auf die Mindesthöhe angehoben.
 - Innenabstand oben in px statt em, damit der Titel auf gleicher Höhe beginnt wie bei der NAS Card.
 
 ## 1.2.0 - 2026-10-06

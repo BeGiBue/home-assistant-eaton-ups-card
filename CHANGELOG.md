@@ -5,14 +5,14 @@ Alle relevanten Änderungen an diesem Projekt werden in dieser Datei dokumentier
 ## 2.0.1 - 2026-10-28
 
 - Aufräumarbeiten ohne Funktionsänderung: Begrenzung der Kartengröße an einer Stelle zusammengeführt, einen überflüssigen Merker, eine nie zutreffende Prüfung und wirkungslose Gestaltungsregeln entfernt. Aussehen, Konfiguration und Verhalten bleiben unverändert.
-- Repository verschlankt: nicht benötigte Logo-Dateien und Bildquelle, interne Release-Checkliste und die Pflicht-Dateien `RELEASE_NOTES_<Version>.md` entfernt (der Release-Text kommt jetzt aus diesem Changelog), doppelte Aussagen in der README gestrichen, Security-Review gekürzt.
+- Repository verschlankt: nicht benötigte Logo-Dateien und Bildquelle, interne Release-Checkliste und die Pflicht-Dateien `RELEASE_NOTES_<Version>.md` entfernt (der Release-Text kommt jetzt aus diesem Changelog), doppelte Aussagen in der README gestrichen.
 
 ## 2.0.0 - 2026-10-24
 
 - Aufnahme in den offiziellen HACS-Katalog; Installation über die HACS-Suche als Standardweg dokumentiert.
 - Migration bestehender Custom-Repositories beschrieben: nur den benutzerdefinierten Eintrag entfernen, die Installation und vorhandene Dashboard-Konfigurationen erhalten; danach HACS aktualisieren und prüfen, dass die Installation weiterhin erkannt wird.
 - README auf Funktionen, Voraussetzungen, Konfiguration und Bedienung ausgerichtet.
-- Security-Review der DOM-Ausgaben, Entity-Werte, Attribute, Bild-URLs und Home-Assistant-Schnittstellen dokumentiert; adversariale Rendering-Tests ergänzt. Keine bestätigte XSS-Lücke im geprüften Stand gefunden. Details und Grenzen stehen in `SECURITY_REVIEW.md`.
+- Adversariale Rendering-Tests für DOM-Ausgaben, Entity-Werte, Attribute, Bild-URLs und Home-Assistant-Schnittstellen ergänzt.
 - Major-Version als Kennzeichnung des HACS-Katalogeintrags: kein automatischer Hinweis auf Breaking Changes; vorhandene Kartentypen und Konfigurationen bleiben kompatibel.
 
 ## 1.2.3

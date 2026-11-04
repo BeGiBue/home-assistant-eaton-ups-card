@@ -2,6 +2,11 @@
 
 Alle relevanten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.
 
+## 2.1.0 - 2026-11-04
+
+- The card and its editor now appear in English by default and in German when Home Assistant is set to German. / Karte und Editor erscheinen jetzt standardmäßig auf Englisch und auf Deutsch, wenn Home Assistant auf Deutsch eingestellt ist.
+- README shortened and available in English and German. / README gekürzt und auf Englisch und Deutsch verfügbar.
+
 ## 2.0.1 - 2026-10-28
 
 - Aufräumarbeiten ohne Funktionsänderung: Begrenzung der Kartengröße an einer Stelle zusammengeführt, einen überflüssigen Merker, eine nie zutreffende Prüfung und wirkungslose Gestaltungsregeln entfernt. Aussehen, Konfiguration und Verhalten bleiben unverändert.

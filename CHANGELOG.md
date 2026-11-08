@@ -2,6 +2,10 @@
 
 Alle relevanten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.
 
+## 2.1.1 - 2026-11-08
+
+- Fixed: the card could jitter (font size and height switching back and forth quickly) when its width was close to a font step (e.g. 400 px) and the page scrollbar appeared and disappeared as a result. The font step is now chosen with ±12 px hysteresis and no longer flips on small width changes. / Behoben: Die Card konnte zappeln (Schrift und Höhe wechselten schnell hin und her), wenn ihre Breite knapp an einer Schriftstufe lag (z. B. 400 px) und die Scrollleiste der Seite dadurch ein- und ausgeblendet wurde. Die Schriftstufe wird jetzt mit ±12 px Hysterese gewählt und kippt bei kleinen Breitenänderungen nicht mehr.
+
 ## 2.1.0 - 2026-11-04
 
 - The card and its editor now appear in English by default and in German when Home Assistant is set to German. / Karte und Editor erscheinen jetzt standardmäßig auf Englisch und auf Deutsch, wenn Home Assistant auf Deutsch eingestellt ist.

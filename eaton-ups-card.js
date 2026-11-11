@@ -237,9 +237,11 @@ class EatonUpsCard extends HTMLElement{
   _render(buildKey){
     const c=this._config,st=this._status();
     const own=String(c.image??"").trim();
-    if(this._imgFor!==own){this._imgFor=own;this._imgBad=false;}
-    // Ließ sich das eigene Bild nicht laden, steht im Markup gleich das eingebettete (sonst würde es beim Angleichen erneut angefordert)
-    const img=(!this._imgBad&&own)||DEFAULT_IMAGE;
+    // Ließ sich das eigene Bild nicht laden, steht im Markup gleich das eingebettete (sonst würde es beim Angleichen
+    // erneut angefordert). Gemerkt wird je Adresse, nicht je Element: Bei einem Neuaufbau während des Ladens meldet
+    // sonst das alte, schon entfernte Bild den Fehler, und das neue bliebe ohne Ersatz.
+    const bad=this._badImg||(this._badImg=new Set());
+    const img=(own&&!bad.has(own)&&own)||DEFAULT_IMAGE;
     const sc=this._scale(),bgm=c.image_mode!=="inline";
     const T=UPST(this._hass);
     const tiles=METRICS.map(([key,labelKey,icon,role])=>{
@@ -275,7 +277,7 @@ class EatonUpsCard extends HTMLElement{
       this._applyTier();
     }
     const p=this.shadowRoot.querySelector("img");
-    if(p)p.onerror=()=>{if(!this._imgBad&&p.getAttribute("src")!==DEFAULT_IMAGE){this._imgBad=true;p.src=DEFAULT_IMAGE;}else p.style.display="none";};
+    if(p)p.onerror=()=>{const src=p.getAttribute("src");if(src!==DEFAULT_IMAGE){bad.add(src);p.src=DEFAULT_IMAGE;}else p.style.display="none";};
     this.shadowRoot.querySelectorAll("[data-more]").forEach(x=>x.onclick=()=>this._more(x.dataset.more));
     this._measure();
   }

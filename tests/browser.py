@@ -161,6 +161,22 @@ async () => {
     set(s);
     await turn(200);
     check('Fehlendes Bild wird bei späteren Werten nicht erneut angefordert', q(card, 'img') === img && img.getAttribute('src').startsWith('data:image/'));
+    // Neuaufbau, während das eigene Bild noch lädt: Das neue Bild muss trotzdem auf das eingebettete zurückfallen
+    for (const early of [true, false]) {
+      const bad2 = 'http://127.0.0.1:9/noch-eins-' + early + '.png';
+      const w = document.getElementById('w');
+      w.replaceChildren();
+      const c = document.createElement('eaton-ups-card');
+      if (early) c.hass = {states: baseStates(), language: 'de', locale: {language: 'de'}};
+      c.setConfig({image: bad2});
+      w.appendChild(c);
+      if (!early) c.hass = {states: baseStates(), language: 'de', locale: {language: 'de'}};
+      c.setConfig({image: bad2, name: 'y'});
+      for (let i = 0; i < 40 && !q(c, 'img').getAttribute('src').startsWith('data:image/'); i++) await turn(100);
+      await turn(200);
+      const im = q(c, 'img');
+      check('Neuaufbau während des Ladens (' + (early ? 'Werte zuerst' : 'Einstellung zuerst') + '): Ersatzbild sichtbar', im.getAttribute('src').startsWith('data:image/') && getComputedStyle(im).display !== 'none' && im.naturalWidth > 0);
+    }
     const b = fixture({config: {image_mode: 'inline'}}).card;
     check('Bild neben dem Titel', !!q(b, '.art img') && !q(b, '.bgimg'));
     const e = fixture({language: 'en'}).card, d = fixture({language: 'de'}).card;

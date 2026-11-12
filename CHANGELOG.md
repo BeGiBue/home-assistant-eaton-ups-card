@@ -2,6 +2,13 @@
 
 Alle relevanten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.
 
+## 2.1.2 - 2026-11-11
+
+- The card no longer rebuilds its content on every value change. It adjusts only what changed: tiles and the device image stay in place, so the keyboard focus is kept, the load bar glides to the new value and the image is not reloaded. / Die Karte baut ihren Inhalt nicht mehr bei jeder Wertänderung neu auf. Sie gleicht nur an, was sich geändert hat: Kacheln und Gerätebild bleiben bestehen, der Tastaturfokus bleibt erhalten, der Lastbalken gleitet zum neuen Wert und das Bild wird nicht neu geladen.
+- Fixed: with the image next to the title (`image_mode: inline`) the card could jitter around 340 px width when the page scrollbar appeared and disappeared. The image area now has a fixed height (with `scale` above 1 the card can be up to about 20 px taller between 350 and 480 px), and the wide (from 700 px) and very narrow (up to 340 px) layouts switch with the same ±12 px tolerance as the font steps. / Behoben: Mit dem Bild neben dem Titel (`image_mode: inline`) konnte die Karte um 340 px Breite zappeln, wenn die Scrollleiste der Seite ein- und ausblendete. Der Bildbereich hat jetzt eine feste Höhe (mit `scale` über 1 kann die Karte zwischen 350 und 480 px bis zu etwa 20 px höher sein), und das breite (ab 700 px) und das sehr schmale Layout (bis 340 px) schalten mit derselben Toleranz von ±12 px wie die Schriftstufen.
+- A custom image that cannot be loaded is no longer requested again on every update. / Ein eigenes Bild, das sich nicht laden lässt, wird nicht mehr bei jeder Aktualisierung erneut angefordert.
+- Browser tests added. / Browser-Tests ergänzt.
+
 ## 2.1.1 - 2026-11-08
 
 - Fixed: the card could jitter (font size and height switching back and forth quickly) when its width was close to a font step (e.g. 400 px) and the page scrollbar appeared and disappeared as a result. The font step is now chosen with ±12 px hysteresis and no longer flips on small width changes. / Behoben: Die Card konnte zappeln (Schrift und Höhe wechselten schnell hin und her), wenn ihre Breite knapp an einer Schriftstufe lag (z. B. 400 px) und die Scrollleiste der Seite dadurch ein- und ausgeblendet wurde. Die Schriftstufe wird jetzt mit ±12 px Hysterese gewählt und kippt bei kleinen Breitenänderungen nicht mehr.

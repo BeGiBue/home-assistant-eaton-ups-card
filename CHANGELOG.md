@@ -2,6 +2,10 @@
 
 Alle relevanten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.
 
+## 2.1.3 - 2026-11-20
+
+- Maintenance: test and build tools updated, no functional changes. / Wartung: Test- und Build-Werkzeuge aktualisiert, keine Änderungen an der Funktion.
+
 ## 2.1.2 - 2026-11-11
 
 - The card no longer rebuilds its content on every value change. It adjusts only what changed: tiles and the device image stay in place, so the keyboard focus is kept, the load bar glides to the new value and the image is not reloaded. / Die Karte baut ihren Inhalt nicht mehr bei jeder Wertänderung neu auf. Sie gleicht nur an, was sich geändert hat: Kacheln und Gerätebild bleiben bestehen, der Tastaturfokus bleibt erhalten, der Lastbalken gleitet zum neuen Wert und das Bild wird nicht neu geladen.
